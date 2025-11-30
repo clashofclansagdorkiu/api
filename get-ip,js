@@ -1,0 +1,7 @@
+import fetch from "node-fetch";
+
+(async () => {
+  const res = await fetch("https://api.ipify.org?format=json");
+  const j = await res.json();
+  console.log("Public IP:", j.ip);
+})();
